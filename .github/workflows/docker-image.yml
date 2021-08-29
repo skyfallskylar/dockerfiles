@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag skyfallskylar/dockerfiles:$(date +%s)
+      run: docker build . --file Dockerfile --tag dockerfiles:$(date +%s)
       
     - name: Docker Push
       run: docker push ${{secrets.DOCKER_USER}}/skylar_docker_images
