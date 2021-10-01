@@ -1,6 +1,4 @@
-FROM ubuntu:latest
-
-RUN apt-get update && apt-get -y update
+FROM python:3.6.7
 
 RUN apt-get install -y build-essential python3.6 python3-pip python3-dev
 
