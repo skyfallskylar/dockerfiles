@@ -2,9 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get -y update
 
-RUN apt-get install -y build-essential python3.6 python3-pip
-
-RUN apt-get install python3.6-dev
+RUN apt-get install -y build-essential python3.6 python3-pip python3.6-dev
 
 RUN pip3 -q install pip --upgrade
 
