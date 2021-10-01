@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook
+FROM ubuntu:latest
 
 RUN apt-get update && apt-get -y update
 
