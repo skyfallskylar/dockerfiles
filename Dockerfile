@@ -14,6 +14,8 @@ RUN pip3 install jupyter
 
 RUN pip3 install xgboost==0.81
 
+RUN pip3 install Cython==0.29.2
+
 RUN pip3 install pandas==0.23.4
 
 RUN pip3 install numpy==1.14.6
