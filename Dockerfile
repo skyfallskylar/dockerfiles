@@ -16,8 +16,6 @@ RUN pip3 install numpy==1.14.6
 
 RUN pip3 install scipy==1.2.0
 
-RUN pip3 install pickle==4.0
-
 RUN pip3 install sklearn==0.19.2
 
 RUN pip3 install seaborn==0.9.0
