@@ -22,5 +22,4 @@ RUN pip3 install seaborn==0.9.0
 
 RUN pip3 install matplotlib==3.0.2
 
-RUN pip3 install re==2.2.1
 
