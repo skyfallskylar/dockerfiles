@@ -1,11 +1,5 @@
 FROM python:3.6.7
 
-RUN apt-get install -y build-essential python3.6 python3-pip python3-dev
-
-RUN apt-get install libpcap-dev libpq-dev -y
-
-RUN pip3 -q install pip --upgrade
-
 RUN pip freeze > requirements.txt
 
 RUN pip3 install -r requirements.txt
