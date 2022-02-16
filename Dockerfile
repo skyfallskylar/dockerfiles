@@ -20,9 +20,7 @@ RUN pip install redshift_connector
 
 RUN pip install openpyxl
 
-RUN curl -O /home/jovyan/work/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz
-
-RUN cat /home/jovyan/work/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz | gunzip -d | tar -xvf -
+RUN curl -O /home/jovyan/work/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz | tar -zxvf
 
 RUN cp bin/* /usr/local/bin
 
