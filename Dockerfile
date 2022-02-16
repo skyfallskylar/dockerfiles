@@ -1,4 +1,6 @@
-FROM jupyter/datascience-notebook:python-3.7.6 --user root
+FROM jupyter/datascience-notebook:python-3.7.6 
+
+USER root
 
 RUN apt-get -y update  && apt-get install -y gcc unixodbc-dev
 
