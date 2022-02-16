@@ -22,9 +22,9 @@ RUN pip install openpyxl
 
 RUN curl https://dev.mysql.com/downloads/file/?id=509555
 
-RUN gunzip mysql-connector-odbc-8.0.28-i686-pc-linux.tar.gz
+RUN gunzip mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz
 
-RUN tar xvf mysql-connector-odbc-8.0.28-i686-pc-linux.tar
+RUN tar xvf mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar
 
 RUN cp bin/* /usr/local/bin
 
