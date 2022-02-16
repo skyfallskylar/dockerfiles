@@ -30,7 +30,7 @@ RUN cd mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit
 
 RUN cp /home/jovyan/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit/bin/* /usr/local/bin 
 
-RUN cp /home/jovyan/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit/lib/* /usr/local/lib
+RUN cp -r /home/jovyan/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit/lib/* /usr/local/lib
 
 RUN myodbc-installer -a -d -n "MySQL ODBC 8.0 Driver" -t "Driver=/usr/local/lib/libmyodbc8w.so"
 
