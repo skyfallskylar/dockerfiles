@@ -19,13 +19,3 @@ RUN ACCEPT_EULA=Y apt-get install -y msodbcsql18
 RUN pip install redshift_connector
 
 RUN pip install openpyxl
-
-RUN curl -O /home/jovyan/work/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz | tar -zxvf
-
-RUN cp bin/* /usr/local/bin
-
-RUN cp lib/* /usr/local/lib
-
-RUN myodbc-installer -a -d -n "MySQL ODBC 8.0 Driver" -t "Driver=/usr/local/lib/libmyodbc8w.so"
-
-RUN myodbc-installer -a -d -n "MySQL ODBC 8.0" -t "Driver=/usr/local/lib/libmyodbc8a.so"
