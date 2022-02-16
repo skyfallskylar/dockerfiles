@@ -26,9 +26,7 @@ RUN gunzip mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar.gz
 
 RUN tar xvf mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar
 
-RUN cp bin/* /usr/local/bin
-
-RUN cp lib/* /usr/local/lib
+RUN cd mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit && cp bin/* /usr/local/bin && cp lib/* /usr/local/lib
 
 RUN myodbc-installer -a -d -n "MySQL ODBC 8.0 Driver" -t "Driver=/usr/local/lib/libmyodbc8w.so"
 
