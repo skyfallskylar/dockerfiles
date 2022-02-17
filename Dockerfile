@@ -14,7 +14,7 @@ RUN curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt
 
 RUN apt-get update
 
-RUN ACCEPT_EULA=Y apt-get install -y msodbcsql18
+RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
 
 RUN pip install redshift_connector
 
