@@ -34,4 +34,14 @@ RUN cp -r /home/jovyan/mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit/lib
 
 RUN myodbc-installer -a -d -n "MySQL ODBC 8.0 Driver" -t "Driver=/usr/local/lib/libmyodbc8w.so"
 
+RUN apt-get install -y openjdk-17-jdk
+
+RUN export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+RUN export PATH=$PATH:$JAVA_HOME/bin
+
+RUN curl -L -O https://repo1.maven.org/maven2/net/sourceforge/jtds/jtds/1.3.1/jtds-1.3.1.jar
+
+RUN pip install JayDeBeApi
+
 RUN myodbc-installer -a -d -n "MySQL ODBC 8.0" -t "Driver=/usr/local/lib/libmyodbc8a.so"
