@@ -45,3 +45,7 @@ RUN curl -L -O https://repo1.maven.org/maven2/net/sourceforge/jtds/jtds/1.3.1/jt
 RUN pip install JayDeBeApi
 
 RUN myodbc-installer -a -d -n "MySQL ODBC 8.0" -t "Driver=/usr/local/lib/libmyodbc8a.so"
+
+RUN apt-get -y install postgresql && apt-get install libpq-dev
+
+RUN pip3 install psycopg2
