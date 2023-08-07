@@ -2,7 +2,7 @@ FROM jupyter/datascience-notebook:latest
 
 USER root
 
-RUN apt-get -y update  && apt-get install -y gcc unixodbc-dev=2.3.7 g++
+#RUN apt-get -y update  && apt-get install -y gcc unixodbc-dev=2.3.7 g++
 
 RUN pip3 install pyodbc
 
@@ -14,7 +14,7 @@ RUN curl -SL --progress-bar https://packages.microsoft.com/config/ubuntu/20.04/p
 
 RUN apt-get update
 
-RUN ACCEPT_EULA=Y apt-get install -y msodbcsql18 
+RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17 odbcinst=2.3.7 odbcinst1debian2=2.3.7 unixodbc-dev=2.3.7 unixodbc=2.3.7
 
 RUN pip3 install redshift_connector
 
