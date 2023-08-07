@@ -8,6 +8,12 @@ RUN pip3 install pyodbc
 
 RUN apt-get update && apt-get install -y gnupg2
 
+RUN apt-get install -y libodbc1
+
+RUN apt update
+
+RUN apt install unixodbc
+
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 RUN curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
