@@ -46,7 +46,7 @@ RUN pip3 install JayDeBeApi
 
 RUN myodbc-installer -a -d -n "MySQL ODBC 8.0" -t "Driver=/usr/local/lib/libmyodbc8a.so"
 
-RUN apt-get -y install postgresql && apt-get install libpq-dev
+RUN apt-get -y install postgresql && apt-get install libpq-dev -y
 
 RUN pip3 install psycopg2
 
