@@ -8,13 +8,13 @@ RUN pip3 install pyodbc
 
 RUN apt-get update && apt-get install -y gnupg2
 
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+RUN curl -SL --progress-bar https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
-RUN curl -SL --PROGRESS-BAR https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+RUN curl -SL --progress-bar https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 RUN apt-get update
 
-RUN ACCEPT_EULA=Y apt-get -y --no-install-recommends install unixodbc-dev msodbcsql18 
+RUN ACCEPT_EULA=Y apt-get install -y msodbcsql18 
 
 RUN pip3 install redshift_connector
 
