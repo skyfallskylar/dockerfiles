@@ -2,7 +2,7 @@ FROM jupyter/datascience-notebook:latest
 
 USER root
 
-RUN apt-get -y update  && apt-get install -y gcc unixodbc-dev g++
+RUN apt-get -y update  && apt-get install -y gcc unixodbc-dev=2.3.7 g++
 
 RUN pip3 install pyodbc
 
