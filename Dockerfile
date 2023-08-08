@@ -54,4 +54,4 @@ RUN rm -f mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar
 
 RUN rm -rf mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit
 
-RUN apt-get update jupyterlab
+RUN pip3 install jupyterlab --upgrade
