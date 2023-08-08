@@ -56,6 +56,6 @@ RUN rm -rf mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit
 
 RUN pip3 uninstall jupyterlab 
 
-RUN pip3 install jupyterlab=4.0.4
+RUN pip3 install jupyterlab==4.0.4
 
 RUN pip3 install jupyter_ai
