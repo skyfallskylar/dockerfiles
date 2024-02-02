@@ -54,6 +54,10 @@ RUN rm -f mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit.tar
 
 RUN rm -rf mysql-connector-odbc-8.0.28-linux-glibc2.12-x86-64bit
 
+RUN pip3 install sqlalchemy
+
+RUN pip3 install pymysql
+
 # RUN pip3 uninstall jupyterlab --y
 
 # RUN pip3 install jupyterlab==4.0.4 
