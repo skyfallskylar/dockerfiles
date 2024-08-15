@@ -60,26 +60,6 @@ RUN pip3 install sqlalchemy
 
 RUN pip3 install pymysql
 
-
-# Clone LLaMA repository from Facebook Research
-RUN git clone https://github.com/facebookresearch/llama.git /home/jovyan/llama
-
-# Navigate to the LLaMA directory
-WORKDIR /home/jovyan/llama
-
-# Install LLaMA dependencies
-RUN pip3 install -r requirements.txt
-
-# Install any additional Python packages required
-RUN pip3 install torch torchvision torchaudio
-
-# Optional: Add LLaMA to the PATH for easy access
-RUN export PATH=$PATH:/home/jovyan/llama
-
-# Reset the working directory to /home/jovyan
-WORKDIR /home/jovyan
-
-
 # RUN pip3 uninstall jupyterlab --y
 
 # RUN pip3 install jupyterlab==4.0.4 
