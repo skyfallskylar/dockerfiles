@@ -2,7 +2,7 @@ FROM jupyter/datascience-notebook:latest
 
 USER root
 
-WORKDIR /app
+# WORKDIR /app
 
 # RUN git clone https://github.com/facebookresearch/llama.git /app/llama
 
