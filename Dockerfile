@@ -58,6 +58,11 @@ RUN pip3 install sqlalchemy
 
 RUN pip3 install pymysql
 
+RUN git clone https://github.com/facebookresearch/llama.git /app/llama
+
+WORKDIR /app/llama
+RUN pip install --no-cache-dir -r requirements.txt
+
 # RUN pip3 uninstall jupyterlab --y
 
 # RUN pip3 install jupyterlab==4.0.4 
