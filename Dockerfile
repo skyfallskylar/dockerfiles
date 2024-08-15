@@ -2,16 +2,7 @@ FROM jupyter/datascience-notebook:latest
 
 USER root
 
-WORKDIR /home/jovyan/work
 
-RUN git clone https://github.com/facebookresearch/llama.git /home/jovyan/work/llama
-
-WORKDIR /home/jovyan/work/llama
-
-# Install LLaMA dependencies
-RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  # Ensure you select the correct CUDA version or use CPU version
-RUN pip install -r requirements.txt  # This assumes a requirements.txt is present in the LLaMA repo
-RUN pip install transformers
 
 # RUN apt-get -y update  && apt-get install -y gcc unixodbc-dev=2.3.7 g++
 
@@ -70,7 +61,16 @@ RUN pip3 install sqlalchemy
 RUN pip3 install pymysql
 
 
+WORKDIR /home/jovyan/work
 
+RUN git clone https://github.com/facebookresearch/llama.git /home/jovyan/work/llama
+
+WORKDIR /home/jovyan/work/llama
+
+# Install LLaMA dependencies
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  # Ensure you select the correct CUDA version or use CPU version
+RUN pip install -r requirements.txt  # This assumes a requirements.txt is present in the LLaMA repo
+RUN pip install transformers
 
 
 # RUN pip3 uninstall jupyterlab --y
