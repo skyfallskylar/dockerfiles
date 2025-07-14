@@ -60,6 +60,10 @@ RUN pip3 install sqlalchemy
 
 RUN pip3 install pymysql
 
+RUN pip3 intsall slack_sdk
+
+RUN pip3 install atlassian
+
 # RUN pip3 uninstall jupyterlab --y
 
 # RUN pip3 install jupyterlab==4.0.4 
